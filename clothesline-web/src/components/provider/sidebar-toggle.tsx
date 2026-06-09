@@ -1,4 +1,4 @@
-import { CloudRain, LucidePanelLeft, Menu, PanelLeft, PanelLeftClose, PanelLeftIcon, PanelLeftOpen, PanelRightOpen } from "lucide-react"
+import { LucidePanelLeft, PanelLeftClose, PanelLeftOpen } from "lucide-react"
 import { useSidebar } from "../ui/sidebar"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 import { AppLogo } from "../custom/app-logo"

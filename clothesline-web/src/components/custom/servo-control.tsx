@@ -78,9 +78,12 @@ export function ServoControl() {
 
   useEffect(() => {
     if (isMoving && targetAction && currentAction === targetAction) {
-      setIsMoving(false);
-      setTargetAction(null);
-      toast.success(`Jemuran berhasil ${targetAction === "MASUK" ? "dimasukkan" : "dikeluarkan"}!`);
+      const actionRef = targetAction; // Capture for the toast
+      setTimeout(() => {
+        setIsMoving(false);
+        setTargetAction(null);
+        toast.success(`Jemuran berhasil ${actionRef === "MASUK" ? "dimasukkan" : "dikeluarkan"}!`);
+      }, 0);
     }
   }, [currentAction, isMoving, targetAction]);
 
