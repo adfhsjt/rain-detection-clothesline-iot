@@ -11,7 +11,9 @@ import { DeviceProvider } from "@/contexts/device-context";
 
 import { 
   Inter, JetBrains_Mono, Poppins, Fira_Code, 
-  Montserrat, DM_Sans, Space_Mono 
+  Montserrat, DM_Sans, Space_Mono,
+  Lora, Merriweather, Source_Code_Pro, IBM_Plex_Mono,
+  Space_Grotesk
 } from "next/font/google";
 import { Toast } from "radix-ui";
 import { Toaster } from "@/components/ui/sonner";
@@ -23,6 +25,11 @@ const fontFiraCode = Fira_Code({ subsets: ["latin"], display: 'swap' });
 const fontMontserrat = Montserrat({ subsets: ["latin"], display: 'swap' });
 const fontDMSans = DM_Sans({ subsets: ["latin"], display: 'swap' });
 const fontSpaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"], display: 'swap' });
+const fontLora = Lora({ subsets: ["latin"], display: 'swap' });
+const fontMerriweather = Merriweather({ subsets: ["latin"], weight: ["300", "400", "700", "900"], display: 'swap' });
+const fontSourceCodePro = Source_Code_Pro({ subsets: ["latin"], display: 'swap' });
+const fontIBMPlexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: 'swap' });
+const fontSpaceGrotesk = Space_Grotesk({ subsets: ["latin"], display: 'swap' });
 
 type AppPropsWithLayout = AppProps & {
   Component: any;
@@ -56,6 +63,11 @@ export default function App({
           --font-montserrat: ${fontMontserrat.style.fontFamily};
           --font-dm-sans: ${fontDMSans.style.fontFamily};
           --font-space-mono: ${fontSpaceMono.style.fontFamily};
+          --font-lora: ${fontLora.style.fontFamily};
+          --font-merriweather: ${fontMerriweather.style.fontFamily};
+          --font-source-code-pro: ${fontSourceCodePro.style.fontFamily};
+          --font-ibm-plex-mono: ${fontIBMPlexMono.style.fontFamily};
+          --font-space-grotesk: ${fontSpaceGrotesk.style.fontFamily};
         }
       `}</style>
       <SessionProvider session={session}>
