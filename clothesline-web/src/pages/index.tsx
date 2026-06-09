@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { TextEffect } from '@/components/motion-primitives/text-effect'
 import { AnimatedGroup } from '@/components/motion-primitives/animated-group'
 import { HeroHeader } from "@/components/layouts/header"
+import { SEO } from "@/components/custom/seo"
 
 const transitionVariants: any = {
   item: {
@@ -30,7 +31,9 @@ export default function Home() {
   const { data: session } = useSession()
 
   return (
-    <div className="flex flex-col min-h-screen font-sans overflow-hidden">
+    <>
+      <SEO title="Smart Clothesline IoT - Home" />
+      <div className="flex flex-col min-h-screen font-sans overflow-hidden">
       <HeroHeader />
 
       <main className="flex-1 overflow-hidden">
@@ -253,5 +256,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

@@ -1,9 +1,15 @@
 import { ReactElement } from "react";
 import ControlPage from "@/views/dashboard/control";
+import { SEO } from "@/components/custom/seo";
 import DashboardLayout from "@/views/dashboard/layout";
 
 const Control = () => {
-  return <ControlPage />;
+  return (
+    <>
+      <SEO title="Kontrol Alat - Smart Clothesline IoT" />
+      <ControlPage />
+    </>
+  );
 };
 
 Control.getLayout = function getLayout(page: ReactElement) {

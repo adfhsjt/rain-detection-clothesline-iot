@@ -160,10 +160,10 @@ export function ServoControl() {
                   )}
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <Button variant="outline" size="lg" disabled={isMoving || currentAction === "KELUAR"} onClick={() => { sendCommand("KELUAR"); triggerMovingUI(); }} className="rounded-xl h-12">
+                  <Button variant="outline" size="lg" disabled={isMoving} onClick={() => { sendCommand("KELUAR"); triggerMovingUI(); }} className="rounded-xl h-12">
                     <Play className="w-4 h-4 mr-2" /> Buka
                   </Button>
-                  <Button variant="outline" size="lg" disabled={isMoving || currentAction === "MASUK"} onClick={() => { sendCommand("MASUK"); triggerMovingUI(); }} className="rounded-xl h-12">
+                  <Button variant="outline" size="lg" disabled={isMoving} onClick={() => { sendCommand("MASUK"); triggerMovingUI(); }} className="rounded-xl h-12">
                     <Square className="w-4 h-4 mr-2" /> Tutup
                   </Button>
                 </div>

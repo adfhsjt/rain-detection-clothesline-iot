@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import AnalyticsPage from "@/views/dashboard/analytics";
+import { SEO } from "@/components/custom/seo";
 import DashboardLayout from "@/views/dashboard/layout";
 import { BarChart3, Droplets, RotateCcw } from "lucide-react";
 
@@ -43,7 +44,12 @@ const Analytics = () => {
     },
   ];
 
-  return <AnalyticsPage stats={dataStats} />;
+  return (
+    <>
+      <SEO title="Analisis Cuaca - Smart Clothesline IoT" />
+      <AnalyticsPage stats={dataStats} />
+    </>
+  );
 };
 
 Analytics.getLayout = function getLayout(page: ReactElement) {
