@@ -54,7 +54,6 @@ const Analytics = () => {
 
 Analytics.getLayout = function getLayout(page: ReactElement) {
   const breadcrumbs = [
-    { label: "Dashboard", href: "/dashboard" },
     { label: "Analytics" },
   ];
 
